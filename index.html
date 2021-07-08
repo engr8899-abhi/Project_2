@@ -10,27 +10,55 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <header id="main-header">
-        <nav style="z-index: 10;">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
+    
+        <nav class="navbar">
+            <div class="content">
+              <div class="logo">
+                <a href="#"><img class="home" src="Images/home.png" alt="image"></a>
+              </div>
+              <ul class="menu-list">
+                <div class="icon cancel-btn">
+                  <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="icon menu-btn">
                 <i class="fas fa-bars"></i>
-            </label>
-            <ul class="Horizontal-list text-center nav-menu responsive">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+              </div>
+            </div>
+          </nav>
+          <script>
+            const body = document.querySelector("body");
+            const navbar = document.querySelector(".navbar");
+            const menuBtn = document.querySelector(".menu-btn");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            menuBtn.onclick = ()=>{
+              navbar.classList.add("show");
+              menuBtn.classList.add("hide");
+              body.classList.add("disabled");
+            }
+            cancelBtn.onclick = ()=>{
+              body.classList.remove("disabled");
+              navbar.classList.remove("show");
+              menuBtn.classList.remove("hide");
+            }
+            window.onscroll = ()=>{
+              this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+            }
+          </script>
+    <header id="main-header">
         <div id="Name-social-container">
             <div>
                 <h1 id="My-Name" class="text-center">
@@ -147,7 +175,8 @@
                         <p class="experience-description text-align-justify"> Worked as a fundraiser with 60 volunteers
                             team. As a Volunteer, raise fund for orphanage childern's education and made posters for the
                             awareness of orphanage children's education.<b> CERTIFICATE OF APPRECIATION</b> by
-                            <b>HOPE</b> for extraordinary dedication Hard work towards child Rights. </p>
+                            <b>HOPE</b> for extraordinary dedication Hard work towards child Rights.
+                        </p>
                     </div>
                 </div>
 
@@ -293,7 +322,7 @@
                     <form id="contact-form">
                         <input id="input-name" name="name" type="text" placeholder="Your Name">
                         <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
-                        <textarea id="input-message" name="input-message" rows="2" cols=40
+                        <textarea id="input-message" name="input-message" rows="2" cols=21
                             placeholder="Message"></textarea>
                         <button class="sub-btn" type="submit">SEND MESSAGE</button>
                     </form>
