@@ -18,15 +18,15 @@
 
 <body>
 
-    
-        <nav class="navbar">
-            <div class="content">
-              <div class="logo">
-                <a href="#"><img class="home" src="Images/home.png" alt="image"></a>
-              </div>
-              <ul class="menu-list">
+
+    <nav class="navbar">
+        <div class="content">
+            <!-- <div class="logo"> -->
+            <a href="#"><img class="home" src="Images/home.png" alt="image"></a>
+            <!-- </div> -->
+            <ul class="menu-list">
                 <div class="icon cancel-btn">
-                  <i class="fas fa-times"></i>
+                    <i class="fas fa-times"></i>
                 </div>
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -35,31 +35,31 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-              </ul>
-              <div class="icon menu-btn">
+            </ul>
+            <div class="icon menu-btn">
                 <i class="fas fa-bars"></i>
-              </div>
             </div>
-          </nav>
-          <script>
-            const body = document.querySelector("body");
-            const navbar = document.querySelector(".navbar");
-            const menuBtn = document.querySelector(".menu-btn");
-            const cancelBtn = document.querySelector(".cancel-btn");
-            menuBtn.onclick = ()=>{
-              navbar.classList.add("show");
-              menuBtn.classList.add("hide");
-              body.classList.add("disabled");
-            }
-            cancelBtn.onclick = ()=>{
-              body.classList.remove("disabled");
-              navbar.classList.remove("show");
-              menuBtn.classList.remove("hide");
-            }
-            window.onscroll = ()=>{
-              this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-            }
-          </script>
+        </div>
+    </nav>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
     <header id="main-header">
         <div id="Name-social-container">
             <div>
@@ -188,7 +188,7 @@
                             <img src="Images/nss.jpg">
                         </div>
                         <h3 class="experience-designation  m0 m-blue"> Volunteer </h3>
-                        <h4 class="experience-company-name"> National Service Scheme </h4>
+                        <h4 class="experience-company-name"> NSS, India </h4>
                         <h5 class="experience-duration m0"> July, 2019 - Aug, 2020 </h5>
                         <p class="experience-description text-align-justify"> As a Team, We provide opportunity to take
                             part in various government led community service activities & programmes.The sole aim of the
@@ -236,7 +236,7 @@
                         <div class="timeline-logo">
                             <img src="Images/school1.png">
                         </div>
-                        <h3 class="experience-designation  m0 m-blue"> Senior Secondary </h3>
+                        <h3 class="experience-designation  m0 m-blue"> HSC </h3>
                         <h4 class="experience-company-name "> Amardeep School </h4>
                         <h5 class="experience-duration m0"> July, 2017 - Aug, 2018 </h5>
                         <p class="experience-description text-align-justify">secured 92.6% (overall) and 97.67% (PCM).
@@ -249,7 +249,7 @@
                         <div class="timeline-logo">
                             <img src="Images/school1.png">
                         </div>
-                        <h3 class="experience-designation  m0 m-blue"> Secondary </h3>
+                        <h3 class="experience-designation  m0 m-blue"> SC </h3>
                         <h4 class="experience-company-name "> Amardeep School </h4>
                         <h5 class="experience-duration m0"> July, 2015 - Aug, 2016 </h5>
 
@@ -324,18 +324,17 @@
                     <form id="contact-form">
                         <input id="input-name" name="name" type="text" placeholder="Your Name">
                         <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
-                        <textarea id="input-message" name="input-message" rows="2" cols=21
+                        <textarea id="input-message" name="input-message" rows="1" cols=21
                             placeholder="Message"></textarea>
                         <button class="sub-btn" type="submit">SEND MESSAGE</button>
                     </form>
                 </div>
                 <div id="my-details-container">
 
-                    <h3> Get In touch </h3>
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. </p>
+                    <h3 style="margin-top: 20px;"> Get In touch </h3>
+                    <p> Feel free to get in touch. Open for opportunity in the feild of web development as a front end developer. </p>
 
-                    <h3> My Address </h3>
+                    <h3 style="margin-top: 30px;"> My Address </h3>
                     <div class="my-details-info-container">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Firozabad, Uttar Pradesh, India.</span>
